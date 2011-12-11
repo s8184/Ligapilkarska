@@ -23,6 +23,7 @@ public class Cbramka {
 	
 		Czawodnik z=new Czawodnik();
 		
+		
 	}
 
 	public int getCzas_zdobycia() {

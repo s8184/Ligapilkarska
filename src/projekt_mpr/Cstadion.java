@@ -45,7 +45,8 @@ public class Cstadion {
 	
 	public String pokaz(){
 		String out = "";
-		out="Stadion :"+this.getNazwa()+" znajduj¹cy sie w "+this.getMiasto()+" o pojemnoœci "+this.getPojemnosc();
+		//out="Stadion :"+this.getNazwa()+" znajduj¹cy sie w "+this.getMiasto()+" o pojemnoœci "+this.getPojemnosc();
+		out=this.getNazwa()+" znajduj¹cy sie w "+this.getMiasto()+" o pojemnoœci "+this.getPojemnosc();
 		return out;
 		
 	}

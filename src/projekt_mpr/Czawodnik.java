@@ -80,12 +80,12 @@ public class Czawodnik {
 			
 			long out=0;
 			long dni=0;
-			Calendar c1=this.getDataPozyskania();
+			Calendar c=this.getDataPozyskania();
 			
 			Calendar dataobec = Calendar.getInstance();
 			
-			dni = dataobec.getTimeInMillis() - c1.getTimeInMillis();
-			out = dni/1000/60/60/24/7;
+			dni = dataobec.getTimeInMillis() - c.getTimeInMillis();
+			out = dni/1000/60/60/24;
 			return out;
 			
 			

@@ -57,10 +57,14 @@ public class Cliga {
 		return out;
 		
 	}
+	
+	public int LiczbaDruzyn() {
+		return this.druzyny.size();
+	}
 
-	public void dodajdruzyne(Cdruzyna d){
+	public boolean dodajdruzyne(Cdruzyna d){
 		
-		druzyny.add(d);	
+		return druzyny.add(d);	
 		
 	}
 	

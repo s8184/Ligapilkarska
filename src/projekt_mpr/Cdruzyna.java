@@ -1,6 +1,5 @@
 package projekt_mpr;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,26 +58,38 @@ public class Cdruzyna {
 		this.zawodnicy.remove(nr);
 		System.out.println("Usuniêto zawodnika "+nr);
 	}
+	
+	public int LiczbaZawodnikow() {
+		return this.zawodnicy.size();
+	}
 
 
 
-	public String pokaz (){
+	public String pokaz(){
 		String out="";
 		
-		out="Druzyna sklada sie z "+this.zawodnicy.size()+" zawodników.\n\n";
-		out+="Lista zawodników dru¿yny "+this.getNazwa()+" z "+this.getMiasto()+":\n";
-		if (zawodnicy.size()==0) out += "Brak zawodników! \n\n";
-		else 
+		out = "Druzyna: "+this.getNazwa()+" z "+this.getMiasto()+"\n";
+
+		if (zawodnicy.size()==0)
+			out += "Brak zawodników!\n";
+		else { 
+			out="Druzyna sklada sie z "+this.zawodnicy.size()+" zawodników.\n\n";
+			out+="Lista zawodników dru¿yny: ";
 		
-		for (Map.Entry<Integer, Czawodnik> z: zawodnicy.entrySet()){
-			out+="Numer: "+z.getKey()+"\n";
-			out+="Zawodnik: "+z.getValue().pokaz()+"\n\n";
+			for (Map.Entry<Integer, Czawodnik> z: zawodnicy.entrySet()){
+				out+="Numer: "+z.getKey()+"\n";
+				out+="Zawodnik: "+z.getValue().pokaz()+"\n\n";
+			}
 		}
+		
 		if (this.getStadion().getPojemnosc()==0)
-			System.out.println(" Nie przypisano stadionu!!! \n\n");
+			System.out.println("Nie przypisano stadionu!\n");
 		else
-		out+="Stadionem dru¿yny jest:"+this.getStadion().pokaz();
+			out+="Stadionem dru¿yny jest:"+this.getStadion().pokaz();
+		
 		return out;
+		
+		
 		}
 	
 	
